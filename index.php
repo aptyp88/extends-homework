@@ -1,5 +1,6 @@
 <?php
-include_once 'product.php';
+include_once 'classes/product.php';
+include_once 'classes/book.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +13,15 @@ include_once 'product.php';
 <body>
     <?php
     $product = new Product('test', 20, 5);
-    echo $product;
+    echo $product->showInfo();
+    
+    $book = new Book('Garry Potter', 100, 2005, 'Veselka', 'Dj. Rouling');
 
-
+    $book -> getYear();
+    echo '<br>';
+    $book -> getPrice();
+    // $book -> getCout();
+    var_dump($book);
     ?>
 </body>
 </html>
