@@ -42,16 +42,16 @@ class Product
 
     public function getPrice()
     {
-        echo $this -> price . self:: $currency . '<br>';
+        return $this -> price . self:: $currency . '<br>';
     }
 
     public function getCount()
     {
-        echo $this -> count . self:: $ct . '<br>';
+        return $this -> count . self:: $ct . '<br>';
     }
 
     public function getTitle()
     {
-        echo $this -> title . '<br>';
+        return $this -> title . '<br>';
     }
 }

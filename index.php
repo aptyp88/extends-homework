@@ -15,18 +15,27 @@ include_once 'classes/game.php';
 <body>
     <?php
     $product = new Product('test', 20, 5);
-    echo $product->showInfo();
+    $product->showInfo();
     
     $book = new Book('Garry Potter', 100, 5, 'Veselka', 'Dj. Rouling', 2001);
 
-    $book -> getYear();
+    /*
+    echo $book -> getYear();
     echo '<br>';
-    $book -> getPrice();
+    echo $book -> getPrice();
     echo '<br>';
-    $book -> getCount();
+    echo $book -> getCount();
     echo '<br>';
     $book -> getIzd();
     // var_dump($book);
+    echo '<br>';
+    */
+
+    $game = new Game('Ведьмак 3: Дикая охота', 562, 5, 'стратегия', '16');
+    // echo '<br>';
+    $book -> showInfo();
+    echo '<br>';
+    $game -> showInfo();
     ?>
 </body>
 </html>

@@ -20,17 +20,39 @@ class Book extends Product
 
     public function getYear()
     {
-        echo $this -> year . self:: $y . '<br>';
+        return $this -> year . self:: $y . '<br>';
     }
 
     public function getIzd()
     {
-        echo $this -> izd;
+        return $this -> izd;
     }
 
     public function getAuthor()
     {
-        echo $this -> author;
+        return $this -> author;
+    }
+
+    public function showInfo()
+    {
+        $tb = parent::getInfo();
+        
+        echo '<table border="1">' . $tb .  '
+            <tr>
+                <th>Издательство</th>
+                <td>' . $this -> getIzd() . '</td>
+            </tr>
+            <tr>
+                <th>Автор</th>
+                <td>' . $this -> getAuthor() . '</td>
+            </tr>
+            <tr>
+                <th>Год выпуска</th>
+                <td>' . $this -> getYear() .'</td>
+            </tr>
+            </table>
+        ';
+        
     }
 
 }
