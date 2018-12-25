@@ -2,9 +2,10 @@
 
 class Product
 {
-    private $title;
+    protected $title;
     protected $price;
-    private $count;
+    protected $count;
+
     public static $currency = ' грн';
     public static $ct = ' шт';
 
@@ -18,7 +19,6 @@ class Product
     public function getInfo()
     {
         return '
-            
                 <tr>
                     <th>Название</th>
                     <td>'.$this->title.'</td>
@@ -31,24 +31,27 @@ class Product
                     <th>Остаток на складе</th>
                     <td>'.$this->count . self::$ct   .'</td>
                 </tr>
-                <br>
-            
         ';
     }
 
     public function showInfo()
     {
-        echo '<table border="1">'.$this->getInfo().'</table>';
+        echo '<table border="1">'.$this->getInfo().'</table><br>';
 
     }
 
     public function getPrice()
     {
-        echo $this ->price . self:: $currency . '<br>';
+        echo $this -> price . self:: $currency . '<br>';
     }
 
     public function getCount()
     {
-        return $this ->count . self:: $ct . '<br>';
+        echo $this -> count . self:: $ct . '<br>';
+    }
+
+    public function getTitle()
+    {
+        echo $this -> title . '<br>';
     }
 }

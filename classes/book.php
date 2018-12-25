@@ -9,8 +9,10 @@ class Book extends Product
     public static $y = ' г.';
 
 
-    public function __construct($izd, $author, $year)
+    public function __construct($title, $price, $count, $izd, $author, $year)
     {
+        parent::__construct($title, $price, $count);
+
         $this -> izd = $izd;
         $this -> author = $author;
         $this -> year = $year;
@@ -18,7 +20,17 @@ class Book extends Product
 
     public function getYear()
     {
-        echo $this -> year . self:: $y;
+        echo $this -> year . self:: $y . '<br>';
+    }
+
+    public function getIzd()
+    {
+        echo $this -> izd;
+    }
+
+    public function getAuthor()
+    {
+        echo $this -> author;
     }
 
 }

@@ -1,7 +1,9 @@
 <?php
 include_once 'classes/product.php';
 include_once 'classes/book.php';
+include_once 'classes/game.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +17,16 @@ include_once 'classes/book.php';
     $product = new Product('test', 20, 5);
     echo $product->showInfo();
     
-    $book = new Book('Garry Potter', 100, 2005, 'Veselka', 'Dj. Rouling');
+    $book = new Book('Garry Potter', 100, 5, 'Veselka', 'Dj. Rouling', 2001);
 
     $book -> getYear();
     echo '<br>';
     $book -> getPrice();
-    // $book -> getCout();
-    var_dump($book);
+    echo '<br>';
+    $book -> getCount();
+    echo '<br>';
+    $book -> getIzd();
+    // var_dump($book);
     ?>
 </body>
 </html>
